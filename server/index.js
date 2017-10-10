@@ -21,7 +21,7 @@ app.use(function(req, res, next) {
 });
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/meanapp');
+mongoose.connect('mongodb://localhost/meanapp', { useMongoClient: true });
 mongoose.connection.once('open', function() {
 
   // Load the models.
